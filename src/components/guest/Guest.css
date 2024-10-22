@@ -1,0 +1,74 @@
+/* Guest Form */
+.guest-form {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.guest-form h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.guest-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-form input,
+.guest-form select,
+.guest-form button {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.guest-form input,
+.guest-form select {
+  border: 1px solid #ccc;
+}
+
+.guest-form label {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.guest-form label input {
+  margin-right: 10px;
+}
+
+.guest-form button {
+  background-color: #2D1116;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.guest-form button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .guest-form {
+    padding: 30px 15px;
+  }
+
+  .guest-form h2 {
+    font-size: 1.8rem;
+  }
+
+  .guest-form input,
+  .guest-form select,
+  .guest-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
