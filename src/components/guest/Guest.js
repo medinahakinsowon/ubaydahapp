@@ -1,34 +1,43 @@
-import React, { useState } from 'react';
-import './Guest.css';
-import { account, database } from '../../appwrite/config';
+import React, { useState } from "react";
+import "./Guest.css";
+import { account, database } from "../../appwrite/config";
 
 const Guest = () => {
-  const [name, setName] = useState('');
-  const [location, setLocation] = useState('');
+  const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
   const [attending, setAttending] = useState(false);
-  const [numberOfGuests, setNumberOfGuests] = useState('');
-  const [buyAttire, setBuyAttire] = useState('');
+  const [numberOfGuests, setNumberOfGuests] = useState("");
+  const [buyAttire, setBuyAttire] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const buyAttireBoolean = buyAttire === 'yes';
+    const buyAttireBoolean = buyAttire === "yes";
 
-    const data =  {
-      name:name,
-      location:location,
-      attending:attending,
+    const data = {
+      name: name,
+      location: location,
+      attending: attending,
       numberOfGuests: parseInt(numberOfGuests),
-      buyAttire:buyAttireBoolean
-     }
-     console.log(data)
+      buyAttire: buyAttireBoolean,
+    };
+    console.log(data);
     try {
-      var guest = await database.createDocument('671778520028f84c21b2', '671786ad001edc6e64c1', 'unique()', data
-      
-      )
-       console.log(guest)
+      var guest = await database.createDocument(
+        "671778520028f84c21b2",
+        "671786ad001edc6e64c1",
+        "unique()",
+        data
+      );
+      // Clear the form inputs
+      setName("");
+      setLocation("");
+      setAttending(false);
+      setNumberOfGuests("");
+      setBuyAttire("");
+      console.log(guest);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
@@ -36,7 +45,6 @@ const Guest = () => {
     <div className="guest-form">
       <h2>RSVP</h2>
       <form onSubmit={handleSubmit}>
-       
         <input
           type="text"
           placeholder="Your Name"
@@ -44,8 +52,7 @@ const Guest = () => {
           onChange={(e) => setName(e.target.value)}
           required
         />
-        
-        
+
         <input
           type="text"
           placeholder="Location"
@@ -53,7 +60,7 @@ const Guest = () => {
           onChange={(e) => setLocation(e.target.value)}
           required
         />
-        
+
         <label>
           <input
             type="checkbox"
@@ -62,7 +69,7 @@ const Guest = () => {
           />
           Will you be attending?
         </label>
-        
+
         <input
           type="number"
           placeholder="How many of you are coming?"
@@ -71,7 +78,7 @@ const Guest = () => {
           min="1"
           required
         />
-        
+
         <select
           value={buyAttire}
           onChange={(e) => setBuyAttire(e.target.value)}
