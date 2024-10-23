@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Guest.css";
 import { account, database } from "../../appwrite/config";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Guest = () => {
+
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [attending, setAttending] = useState(false);
@@ -29,6 +32,8 @@ const Guest = () => {
         "unique()",
         data
       );
+      // Show success toast
+         toast.success("Guest information submitted successfully!");
       // Clear the form inputs
       setName("");
       setLocation("");
@@ -37,6 +42,7 @@ const Guest = () => {
       setBuyAttire("");
       console.log(guest);
     } catch (error) {
+      toast.error("Failed to submit guest information. Please try again.");
       console.log(error);
     }
   };
@@ -90,6 +96,8 @@ const Guest = () => {
         </select>
         <button type="submit">Submit</button>
       </form>
+       {/* ToastContainer to display the toast messages */}
+        <ToastContainer />
     </div>
   );
 };
