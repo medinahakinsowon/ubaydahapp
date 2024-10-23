@@ -28,7 +28,7 @@ const FAQ = () => {
     {
       question: "Is there a dress code?",
       answer:
-        "Yes, the dress code; for the pride family, wine senator material (call: 08030742177) and silver lace (call: 08028110534) and also an ankara (call: 08035640502) while for the groom family, white and emerald green (call: 08033476988). Please feel free to dress comfortably while still keeping in mind the theme of the event.",
+        "Yes, the dress code; for the bride family, wine senator material (call: 08030742177) and silver lace (call: 08028110534) and also an ankara (call: 08035640502) while for the groom family, white and emerald green (call: 08033476988). Please feel free to dress comfortably while still keeping in mind the theme of the event.",
     },
     {
       question: "Can I bring a plus-one?",
