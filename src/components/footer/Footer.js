@@ -6,6 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <p>&copy; 2024 SumatsDigital. All rights reserved.</p>
       <p>A product of SumatsDigital.</p>
+      <p>+234-806-38-22373</p>
     </footer>
   );
 };

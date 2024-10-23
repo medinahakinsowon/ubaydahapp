@@ -52,7 +52,7 @@ const FAQ = () => {
     {
       question: "How can I RSVP?",
       answer:
-        "You can RSVP by visiting the website https://ubaydahandmasud.vercel.app/.",
+        "You can RSVP by filling the guest form (RSVP) on the website https://ubaydahandmasud.vercel.app/.",
     },
     {
       question: "What time does the reception end?",

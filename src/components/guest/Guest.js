@@ -49,7 +49,7 @@ const Guest = () => {
 
   return (
     <div className="guest-form">
-      <h2>RSVP</h2>
+      <h2>GUEST FORM (RSVP)</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
